@@ -23,6 +23,50 @@ _Computational experiments on synthetic problem instances demonstrate that the m
 <br>
 
 ## Repository Structure
+ALRBP/
+│
+├── README.md
+├── requirements.txt
+├── LICENSE
+│
+├── data/
+│   ├── synthetic instances/
+│   │   ├── 10_tasks/
+│   │   ├── 15_tasks/
+│   │   ├── ...
+│   │   └── 40_tasks/
+│   │
+│   └── feasible_instances/
+│       ├── 10_tasks/
+│       ├── 15_tasks/
+│       ├── ...
+│       └── 40_tasks/
+│
+├── src/
+│   ├── model/
+│   │   ├── alb_model.py
+│   │   ├── rebalancing_model.py
+│   │   └── fairness_metrics.py
+│   │
+│   ├── experiments/
+│   │   ├── run_balancing.py
+│   │   ├── run_rebalancing.py
+│   │   └── compute_nadir_utopia.py
+│   │
+│   └── analysis/
+│       ├── aggregate_results.py
+│       ├── compute_fairness_tables.py
+│       └── plots.py
+│
+├── results/
+│   ├── tables/
+│   │   ├── table_fairness.tex
+│   │   └── table_robustness.tex
+│   └── logs/
+│
+└── scripts/
+    ├── reproduce_main_results.sh
+    └── reproduce_tables.sh
 
 <br>
 
