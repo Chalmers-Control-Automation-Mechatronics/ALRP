@@ -8,10 +8,8 @@
 </p>
 <br>
 
-This is the official repository for **A Multi-Worker Assembly Line Rebalancing with Spatial and Ergonomic Considerations**. This repository contains
-- XXXX.
-- YYYY.
-- ZZZZ.
+This is the official repository for **A Multi-Worker Assembly Line Rebalancing with Spatial and Ergonomic Considerations**.  
+It contains the Python implementations of the proposed linear and quadratic ALRBP models, the procedures to generate feasible incumbent solutions, and the scripts required to reproduce all experimental results reported in the paper.
 
 <br>
 
@@ -63,8 +61,24 @@ ALRBP/
 </pre>
 ## Getting Started
 
+### Prerequisites
+
+1. **Python** (version 3.11 or higher)
+2. Install required dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Solver:
+    - [Gurobi Optimizer](https://www.gurobi.com)
+
+### Running the Code
+
+run_ALRBP.py – loads feasible instances and solves the Assembly Line Rebalancing Problem using either the linear or quadratic formulation.
+
 <br>
 
 ## Licence
 
-<br>
+This project is licensed under the MIT License. See `LICENSE` for details.
