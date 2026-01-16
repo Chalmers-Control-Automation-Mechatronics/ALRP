@@ -23,53 +23,44 @@ _Computational experiments on synthetic problem instances demonstrate that the m
 <br>
 
 ## Repository Structure
+
+<pre>
 ALRBP/
-│
-├── README.md
-├── requirements.txt
-├── LICENSE
+├── README.md                        # Project overview + steps to reproduce experiments
+├── requirements.txt                 # Python dependencies (incl. gurobipy)
+├── LICENSE                          # License information
 │
 ├── data/
-│   ├── synthetic instances/
-│   │   ├── 10_tasks/
-│   │   ├── 15_tasks/
-│   │   ├── ...
-│   │   └── 40_tasks/
+│   ├── synthetic_instances/         # Randomly generated (potentially infeasible) instances
 │   │
-│   └── feasible_instances/
-│       ├── 10_tasks/
-│       ├── 15_tasks/
-│       ├── ...
-│       └── 40_tasks/
+│   ├── feasible_instances/
+│   │   ├── opt/                     # Feasible incumbents from ALBP solved to optimality
+│   │   └── subopt/                  # Feasible incumbents from ALBP with target MIPGap (e.g., 80%)
+│   │
+│   └── norm_values/                 # Nadir/utopia (or normalization) values used to scale objectives
 │
 ├── src/
-│   ├── model/
-│   │   ├── alb_model.py
-│   │   ├── rebalancing_model.py
-│   │   └── fairness_metrics.py
+│   ├── models/
+│   │   ├── Q_ALRBP_model.py              # Rebalancing model (quadratic area constraint)
+│   │   └── L_ALRBP_model.py              # Rebalancing model (linearized area constraint)
 │   │
-│   ├── experiments/
-│   │   ├── run_balancing.py
-│   │   ├── run_rebalancing.py
-│   │   └── compute_nadir_utopia.py
-│   │
-│   └── analysis/
-│       ├── aggregate_results.py
-│       ├── compute_fairness_tables.py
-│       └── plots.py
+│   └── scripts/
+│       ├── run_ALBP.py                   # Runs ALBP on synthetic instances -> feasible_instances/(opt|subopt)
+│       ├── norm_values.py                # Computes normalization values -> data/norm_values/
+│       └──  run_ALRBP.py                 # Runs ALRBP (both quadratic and linear) on feasible instances   
 │
-├── results/
-│   ├── tables/
-│   │   ├── table_fairness.tex
-│   │   └── table_robustness.tex
-│   └── logs/
-│
-└── scripts/
-    ├── reproduce_main_results.sh
-    └── reproduce_tables.sh
+└── results/
+    ├── rebalancing/                       # Rebalancing results
+    │
+    ├── tables/                            # Final LaTeX-ready tables for the paper
+    │   ├── table_fairness_main.tex
+    │   └── table_fairness_robustness.tex
+    │
+    └── plots/                             # Quadratic vs Linear plot
+        └── cactus_plot/
 
-<br>
 
+</pre>
 ## Getting Started
 
 <br>
