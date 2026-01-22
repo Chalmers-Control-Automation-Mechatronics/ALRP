@@ -1,0 +1,34 @@
+task_id,execution_time,ergonomic_value,predecessors,area,previous_station
+0,3,1,[],internal,1
+1,4,3,[],internal,1
+2,1,3,[1],internal,1
+3,1,3,"[0, 2, 1]",external,1
+4,5,5,[],internal,1
+5,1,3,[],internal,2
+6,5,5,[],external,1
+7,3,4,[],external,2
+8,2,4,[],external,1
+9,6,4,[],external,1
+10,4,1,[],internal,2
+11,6,2,"[4, 3]",internal,3
+12,5,1,"[6, 9, 2]",internal,1
+13,1,2,[],external,1
+14,5,3,"[5, 2, 13]",external,1
+15,5,4,"[4, 0, 1]",internal,3
+16,4,2,"[8, 11]",internal,3
+17,2,3,"[3, 7, 11]",internal,1
+18,4,2,"[11, 5]",external,3
+19,6,2,[15],internal,0
+20,7,3,"[14, 4]",external,1
+21,5,5,"[13, 11, 7]",internal,2
+22,3,1,"[11, 14, 7]",internal,3
+23,4,2,[],external,0
+24,5,3,[7],internal,0
+25,2,4,"[19, 11, 8]",internal,2
+26,1,2,"[13, 9]",external,2
+27,7,4,[19],external,0
+28,6,3,"[3, 11]",internal,0
+29,7,5,"[16, 15, 7]",internal,2
+30,2,3,"[12, 10]",internal,3
+31,3,4,[10],internal,3
+32,1,2,[],external,1
