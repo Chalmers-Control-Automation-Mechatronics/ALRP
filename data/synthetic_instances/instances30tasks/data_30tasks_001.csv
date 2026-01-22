@@ -1,0 +1,31 @@
+task_id,execution_time,ergonomic_value,predecessors,area,previous_station
+0,1,1,[],internal,2
+1,2,1,[0],internal,2
+2,3,4,[],external,2
+3,6,4,[0],internal,0
+4,5,2,"[3, 0]",internal,1
+5,7,5,[],internal,3
+6,6,1,[5],external,0
+7,1,4,[],internal,2
+8,3,1,"[1, 2, 4]",internal,2
+9,6,1,[5],external,1
+10,5,1,[9],external,3
+11,7,2,"[7, 0, 4]",external,1
+12,6,1,"[11, 7, 3]",external,1
+13,6,4,"[5, 4]",external,2
+14,3,5,"[5, 1]",external,2
+15,5,5,[10],internal,1
+16,3,2,"[11, 3, 8]",internal,1
+17,7,2,"[1, 6]",external,0
+18,7,5,[14],external,3
+19,1,5,[0],internal,2
+20,1,2,"[10, 2]",internal,3
+21,4,1,[],external,1
+22,6,1,"[13, 6, 20]",internal,1
+23,4,1,"[12, 3]",internal,1
+24,2,4,[13],external,3
+25,3,3,"[0, 13]",external,3
+26,6,2,[13],external,0
+27,1,2,[],internal,0
+28,5,5,[4],internal,3
+29,6,3,[3],internal,3
