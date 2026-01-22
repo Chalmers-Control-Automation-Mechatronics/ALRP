@@ -1,0 +1,11 @@
+task_id,execution_time,ergonomic_value,predecessors,area,previous_station,area_binary,jain_workload,gini_workload,norm_range_workload,cv_workload,jain_ergonomic,gini_ergonomic,norm_range_ergonomic,cv_ergonomic
+0,3,3,[],internal,0,1,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+1,7,5,[0],internal,0,1,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+2,3,3,"[1, 0]",internal,1,1,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+3,4,4,[],internal,0,1,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+4,1,5,"[1, 0]",internal,1,1,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+5,1,2,"[1, 3]",external,0,0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+6,5,2,[2],external,1,0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+7,5,4,[],internal,1,1,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+8,6,2,[0],internal,0,1,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+9,7,2,"[1, 3]",external,1,0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
