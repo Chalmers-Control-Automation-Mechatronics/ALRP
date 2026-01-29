@@ -37,25 +37,17 @@ ALRBP/
 │   │
 │   └── norm_values/                 # Nadir/utopia (or normalization) values used to scale objectives
 │
-├── src/
-│   ├── models/
-│   │   ├── Q_ALRBP_model.py              # Rebalancing model (quadratic area constraint)
-│   │   └── L_ALRBP_model.py              # Rebalancing model (linearized area constraint)
-│   │
-│   └── scripts/
-│       ├── run_ALBP.py                   # Runs ALBP on synthetic instances -> feasible_instances/(opt|subopt)
-│       ├── norm_values.py                # Computes normalization values -> data/norm_values/
-│       └──  run_ALRBP.py                 # Runs ALRBP (both quadratic and linear) on feasible instances   
-│
-└── results/
-    ├── rebalancing/                       # Rebalancing results
+└── src/
+    ├── models/
+    │   ├── Q_ALRBP_model.py              # Rebalancing model (quadratic area constraint)
+    │   └── L_ALRBP_model.py              # Rebalancing model (linearized area constraint)
     │
-    ├── tables/                            # Final LaTeX-ready tables for the paper
-    │   ├── table_fairness_main.tex
-    │   └── table_fairness_robustness.tex
-    │
-    └── plots/                             # Quadratic vs Linear plot
-        └── cactus_plot/
+    └── scripts/
+        ├── run_ALBP.py                   # Runs ALBP on synthetic instances -> feasible_instances/(opt|subopt)
+        ├── norm_values.py                # Computes normalization values -> data/norm_values/
+        └──  run_ALRBP.py                 # Runs ALRBP (both quadratic and linear) on feasible instances   
+
+
 
 
 </pre>
