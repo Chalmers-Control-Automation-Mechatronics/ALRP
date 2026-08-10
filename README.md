@@ -8,15 +8,26 @@
 </p>
 <br>
 
-This is the official repository for **A Multi-Worker Assembly Line Rebalancing with Spatial and Ergonomic Considerations**.  
-It contains the Python implementations of the proposed linear and quadratic ALRBP models, the procedures to generate feasible incumbent solutions, and the scripts required to reproduce all experimental results reported in the paper.
+This repository contains the code and experimental data supporting two research contributions on multi-worker assembly line rebalancing:
+
+- **A Multi-Worker Assembly Line Rebalancing with Spatial and Ergonomic Considerations** (IFAC 2026)
+- **Multi-Worker Assembly Line Rebalancing with Relevance-Guided Configuration Preservation** (IEEE CASE 2026)
+
+It includes the Python implementations of the proposed optimization models, the procedures used to generate and extend the benchmark instances, and the scripts required to reproduce the computational experiments reported in both papers. The material associated with each publication is organized in a dedicated directory.
 
 <br>
 
-## Abstract
-_This work addresses the Assembly Line Rebalancing Problem in manual assembly systems where multiple workers operate in parallel within the same station—an industrially relevant scenario that remains insufficiently explored in the literature. A multi-objective optimization model is proposed that incorporates task reassignment, worker allocation, ergonomic evaluation, and explicit spatial feasibility through work-area constraints. The formulation minimizes deviations from the current configuration while promoting balanced workload and ergonomic conditions among workers._
+### Research Overview
 
-_Computational experiments on synthetic problem instances demonstrate that the model consistently generates feasible and human-centered reconfigurations across varying cycle-time conditions, highlighting its potential as a decision-support tool for industrial rebalancing in flexible production environments._
+This repository investigates the Assembly Line Rebalancing Problem in manual assembly systems where multiple workers can operate in parallel within the same station. The proposed approaches integrate task reassignment, workload and ergonomic balance, and explicit spatial feasibility through work-area constraints. Particular attention is also devoted to preserving relevant elements of the existing assembly configuration during rebalancing.
+
+### IFAC 2026
+
+The first contribution proposes a multi-objective optimization framework that jointly addresses task reassignment, worker allocation, workload balance, ergonomic conditions, and spatial feasibility. Linear and quadratic formulations of the work-area constraints are introduced and computationally compared. Experiments on synthetic instances show that the proposed models can generate feasible and human-centered configurations under different cycle-time conditions.
+
+### IEEE CASE 2026
+
+The second contribution introduces a relevance-guided approach to configuration preservation. Rather than treating all tasks uniformly, the proposed MSF-p metric prioritizes tasks according to their processing time, ergonomic load, and structural importance in the precedence graph. The resulting optimization model balances workload and ergonomic conditions while preserving the most relevant task groupings. Computational experiments on extended benchmark instances evaluate solution quality, robustness, formulation performance, and the effect of the pruning parameter.
 
 <br>
 
