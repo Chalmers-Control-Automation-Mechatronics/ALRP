@@ -24,28 +24,47 @@ _Computational experiments on synthetic problem instances demonstrate that the m
 
 <pre>
 ALRBP/
-├── README.md                        # Project overview + steps to reproduce experiments
-├── requirements.txt                 # Python dependencies (incl. gurobipy)
-├── LICENSE                          # License information
+├── README.md                              # Project overview + steps to reproduce experiments
+├── requirements.txt                       # Python dependencies (incl. gurobipy)
+├── LICENSE                                # License information
 │
-├── data/
-│   ├── synthetic_instances/         # Randomly generated (potentially infeasible) instances
-│   │
-│   ├── feasible_instances/
-│   │   ├── opt/                     # Feasible incumbents from ALBP solved to optimality
-│   │   └── subopt/                  # Feasible incumbents from ALBP with target MIPGap (e.g., 80%)
-│   │
-│   └── norm_values/                 # Nadir/utopia (or normalization) values used to scale objectives
 │
-└── src/
-    ├── models/
-    │   ├── Q_ALRBP_model.py              # Rebalancing model (quadratic area constraint)
-    │   └── L_ALRBP_model.py              # Rebalancing model (linearized area constraint)
+├── IFAC2026/
+│   ├── README.md                          # Description of the IFAC 2026 paper
+│   │
+│   ├── data/
+│   │   ├── synthetic_instances/           # Generated synthetic instances
+│   │   ├── balanced_instances/            # Feasible ALBP solutions used as existing task allocations
+│   │   │   ├── opt/                       # Instances solved to optimality
+│   │   │   └── subopt/                    # Instances solved up to the target MIP gap (e.g., 80%)
+│   │   └── norm_values/                   # Nadir/utopia values used to normalize the objectives
+│   │
+│   └── src/
+│       ├── models/
+│       │   ├── Q_ALRBP_model.py           # Rebalancing model with quadratic work-area constraints
+│       │   └── L_ALRBP_model.py           # Rebalancing model with linearized work-area constraints
+│       │
+│       └── scripts/
+│           ├── run_ALBP.py                # Runs ALBP on synthetic instances → balanced_instances/(opt|subopt)
+│           ├── compute_norm_values.py     # Computes normalization values → data/norm_values/
+│           └── run_ALRBP.py               # Runs both ALRBP formulations on the balanced instances
+│
+│
+└── CASE2026/
+    ├── README.md                          # Description of the IEEE CASE 2026 paper
     │
-    └── scripts/
-        ├── run_ALBP.py                   # Runs ALBP on synthetic instances -> feasible_instances/(opt|subopt)
-        ├── norm_values.py                # Computes normalization values -> data/norm_values/
-        └──  run_ALRBP.py                 # Runs ALRBP (both quadratic and linear) on feasible instances   
+    ├── data/
+    │   ├── generated_extended_instances/  # Benchmark instances extended with spatial and ergonomic attributes
+    │   ├── balanced_instances/            # Initial balanced configurations used as inputs for rebalancing
+    │   └── experimental_parameters/       # Experimental settings, including cycle times, K values, and solver parameters
+    │
+    ├── src/
+    │   └── scripts/
+    │       ├── instance_extension.py      # Extends the original benchmark datasets with the required attributes
+    │       ├── run_balancing.py           # Generates the initial balanced configurations
+    │       └── run_rebalancing.py         # Solves the proposed multi-worker rebalancing problem
+    │
+    └── results/                           # Results reported in the IEEE CASE 2026 paper                    
 
 
 
