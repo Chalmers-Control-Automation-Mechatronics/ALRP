@@ -1,0 +1,8 @@
+task_id,execution_time,ergonomic_value,area,predecessors,previous_station
+1,1.0,1.6096286049650217,external,[],0
+2,5.0,3.3809534231134144,internal,[1],0
+3,4.0,3.891312773111933,external,[2],1
+4,3.0,3.552754023435748,external,[1],0
+5,5.0,3.086562701431265,internal,[2],1
+6,6.0,3.4572922072168253,internal,[5],3
+7,5.0,3.1847808552636647,internal,[4],2
