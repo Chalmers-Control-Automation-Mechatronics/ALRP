@@ -97,7 +97,7 @@ pip install -r requirements.txt
 
 ### Running the Code
 
-run_ALRBP.py – loads feasible instances and solves the Assembly Line Rebalancing Problem using either the linear or quadratic formulation.
+run_ALRBP.py (or run_rebalancing.py) – loads feasible instances and solves the Assembly Line Rebalancing Problem.
 
 <br>
 
